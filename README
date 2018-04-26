@@ -1,0 +1,10 @@
+How to Generate Random Text:
+
+1. You need to pass a directory of txt files or a single txt file to the preprocessor.  The preprocessor will produce a file named ```processed```.
+To run type ```java -jar preProcessor.jar < path to directory or txt>```
+
+2. Next you must run the NGram builder. You must pass the processed file path to "processed" and the size of ngram you want. This will produce a "grams" file.
+E.g. ```java -jar NgramBuilder.jar <path to processed file> <size of ngram>```
+
+3. Finally, to produce text you run the language processor.  The language processor will take the processed file "grams" and the number of sentences you want.
+E.g. ```java -jar LanguageProcessor.jar <path to grams> <# of sentences>```
